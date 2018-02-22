@@ -1,0 +1,2512 @@
+{
+	"info": {
+		"name": "Back-Estandar",
+		"_postman_id": "b7ba2855-0808-7945-3b45-6ef1b1261f66",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "en_us"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Roberto 1",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Garcia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "garcia.robertogarcia+55@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123qwe1",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123qwe1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "",
+							"type": "file",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "activate account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/activate_account/eyJpdiI6IllrN1wvNkF2ajFkMEl0djBNdVFsTFpnPT0iLCJ2YWx1ZSI6ImU1c2pMOXY4Z1UwMzBSaUhSRmFWSjgrVEl2UGRaNlBHOXREenV0bzJsQW1DaFdPZVJtejQ1ME9CazNhN1Z3THgiLCJtYWMiOiIwYmMxMDVhODhkZTM3ODlmNTA0MTVkYjNjNzA2ZWE2NWIzMDI3ODIwMTM5MTQ5YTY5Mjk4YmE4ZjJjY2ZlMjIzIn0=",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"activate_account",
+						"eyJpdiI6IllrN1wvNkF2ajFkMEl0djBNdVFsTFpnPT0iLCJ2YWx1ZSI6ImU1c2pMOXY4Z1UwMzBSaUhSRmFWSjgrVEl2UGRaNlBHOXREenV0bzJsQW1DaFdPZVJtejQ1ME9CazNhN1Z3THgiLCJtYWMiOiIwYmMxMDVhODhkZTM3ODlmNTA0MTVkYjNjNzA2ZWE2NWIzMDI3ODIwMTM5MTQ5YTY5Mjk4YmE4ZjJjY2ZlMjIzIn0="
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "social register/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\":\"Christian\",\n  \"second_name\": \"Perez\",\n  \"email\": \"f.lima.rodriguez@gmail.com\",\n  \"provider\": \"twitter\",\n  \"provider_token\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImVkMDA1NWZhNWM0MDY5NzRhMGVmNTdhYmFjMmIyNzk4MTBhY2VkYWQifQ.eyJhenAiOiI3NjI2NDYxMDE1MTItMTgyM3ZnZmh1bHRtdjhlYXZqcjJ0cDNwNGFpOTFyMWouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI3NjI2NDYxMDE1MTItOW5uN25sbW5za3R0dXVqbnE1b3ZzNTJsdmFmOWE5cXYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTI1NTM4NzcwMzcxMTI4MTk1ODQiLCJlbWFpbCI6ImYubGltYS5yb2RyaWd1ZXpAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbSIsImlhdCI6MTUxMjY4NzE5OSwiZXhwIjoxNTEyNjkwNzk5LCJuYW1lIjoiRmF1c3RvIExpbWEiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tLy00ZnFrc01oOHgwUS9BQUFBQUFBQUFBSS9BQUFBQUFBQUFFYy83T1JxMzlFZFpFSS9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiRmF1c3RvIiwiZmFtaWx5X25hbWUiOiJMaW1hIiwibG9jYWxlIjoiZXMifQ.JB6Huex6iSGFY6YIqVqGT4DGaPrIJD8FFQZvkqghRFJNyMvkrJbHNexOs30a34N3U5s0kpdhJRK3LmQb7HlO9e7R6FCofUhrCfvT2V4j8VX6htvBRVQp5wMTBNo43h3peU11vB0VvtJlec0npsFOjgNVHnNlOt_-ofmrYuCguyed_cea7ab7zDq9VFa4P2IB67sO50y4w2UIJ2IwPi_50VCruYblNpmicdvJwp6cWwXmOnPVEH92EKAwQ4X3hRpX9dPT8IuMAvXB36c2wArkNfRN4NIt1h4ezLBxaxTxsLIeLL6tDBJ5yDOo42iBFSekqczfxoBR6TA14S-XfSrkOw\",\n  \"provider_user_id\": \"112553877037112819584\",\n  \"check_if_register\": false,\n  \"image\":\"hdsaldskldsñkdsñldsa\"\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/social_auth",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"social_auth"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "desarrollo@kokonutstudio.com",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "123qwe1",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRjMDE5ZTQxM2E2MGU3NjBmMDdlMzE3OWMyZTZhOTFhMzEwMDFmM2JkOGQ1NTA5OGE5N2ExMDY0OTZmYmJhZDI4NTFkNDNlZWQxNjU4ZmUyIn0.eyJhdWQiOiIyIiwianRpIjoiNGMwMTllNDEzYTYwZTc2MGYwN2UzMTc5YzJlNmE5MWEzMTAwMWYzYmQ4ZDU1MDk4YTk3YTEwNjQ5NmZiYmFkMjg1MWQ0M2VlZDE2NThmZTIiLCJpYXQiOjE1MTg1NjYzMzAsIm5iZiI6MTUxODU2NjMzMCwiZXhwIjoxNTE5MTcxMTMwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.HATFmVsWSusOzgFuAebXjnLLUeutt1sP7IqICqKkUEovg53QwkspeIBpNrEedv5ekBa-6Ufu1APXadElChNk2-h8CfmitjES7bXnkAyH98dD82rIumCzL6kczI4Vybbc26K2nAk0Y1PgicPi7trAVrmu-v7Sah4xLNo6JM2WV1EjBFSkvrLLV-JL9CVdI-2qW-kJYiKo0IlTu-gbMw9rodFxuCbh2jFEDqYl27WPndw5Qm9VxKLn6ieXdb8mIMHYDwlpUm_nbO0TFz91PmnWVS_XqlIl6RDMKP0r0eagy59oL_8ABLxRv79pYyWejhk6ar0r0o0mDORYYt1KN88H1oRjtrR1Iz8Cl5M-pIUbAo9AIpV8qQ3jKRIhxiw57ELfbeR25XWeV9rvsJzblZ8HrN0bhPWhNzLoVQNEPAz5i-dg0sVC7R7opmaRp0FoTWxk4wS2qgXSqfef-S3Yz-LBKRPVjKk-7Na8yU4tGnwkkXjW-Sw3J6EeYAT87W2QNhmfAd9dHlFTf1rgJBg4MmofKT5Llb2T4FgHOHBBnyg5qOog8d1nthHa-WDoPE21nn253kFiM_dRIILrhE3ohZn29qbRD6rpxRkvTZBdRcRPzeHByDXHyGBDllnlIGlP763jlELzWtV0aAXopoarjDfBdoY8fQeb0aylPqxqEj3cNCY"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "restore password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "garcia.robertogarcia+7@gmail.com1",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/restore_password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"restore_password"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "reset_password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJpdiI6IlJITUtQTVJlc0w5N0pXaGNxTHBhbGc9PSIsInZhbHVlIjoidnYxK1Fkc095M0VHYXFnbXhtUWx4WVwvSHBYdzVoaTNreUpGeHpGam0xcHV3S1ZYZE05bmhKNVUrSVFJRzd4WnQiLCJtYWMiOiIwNmIwNGUxNWI4MjY0MGZiODM5YmM0ZTFlZWZlMGY0YjQyZGM2NWU3N2ZkYmMyMmMzMGE5ZDY0ZjdkYWZiMzg3In0=",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/reset_password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"reset_password"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh_token",
+							"value": "def502000ada677cad7b77c31d2542c2235ad5a200e232c6e`46b2e853e669c3af8c2cb9524e8ca63461add13b00f9e433cd45d807e9bd4dcb8477b9d35699b655424eee74fd9a9a76e19c17d9368b2c6b2b88eaef8528efdf1e8ba7183d977cd9525d5d2a63f9dcfd71d05c679705f42aa5470e99c76789c0e0e7e15f074e5798760910821cf46037a20b31714c60589d9bd113d184f14ca2ec076b2ab1943e1563b42f5fff02d19d5a94c3afb3471a7e1b20beefcbc2bde7637d0c2b0f341baa9ec754eed97181dcc40d3551603263dcfcc16c2101ba9e1c58f8358b41d9414c3eb3fe367d15984a0d4f636403d9fd1404ce1e50c23642884956e42941c856186132098b39a0e3b1737cc4a1adc53345d1be9e34567340a5de11bc0c88679b5db963e1cfe17ea7f26898b101dae5218e450292b4568bcc331ce1e5c12d6fe3994ea80905546c1479ddb15626dc91c466611ab896540f49b7e63909febb2a3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/refresh",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"refresh"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImQ4NDk3NDdkYjljZDg0Y2VhYzI1NzZhYzlmYWYxYjk2NDQzMDViN2Y2ODYyOGViZjg4Yjc5Yzg3NTAzZGJkZWMxZTk3OTExMjU0YzI1MTA2In0.eyJhdWQiOiIyIiwianRpIjoiZDg0OTc0N2RiOWNkODRjZWFjMjU3NmFjOWZhZjFiOTY0NDMwNWI3ZjY4NjI4ZWJmODhiNzljODc1MDNkYmRlYzFlOTc5MTEyNTRjMjUxMDYiLCJpYXQiOjE1MTg2NDc4MjIsIm5iZiI6MTUxODY0NzgyMiwiZXhwIjoxNTE5MjUyNjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CjjqJadLomDmGGuU4po1FG-Fp8rbqgqtwDAnML-pp5I7RSrBszyv--USws177vgFcbnepml8Bx4riqy7b0EgIyXiNy5l2k7QFIQD6Ozgh67DCA3isbtI0UuxG189MUuoPcHWGupyP6hD-S9xtHmgUrI_6b4KJx6Fg9Ntg1A1v45D4K5MzbSQa7Ns1UJOjbTvpvr9KNrmePRsdI3V6IVxeIdCcsWlLT4-G7AYc63i76bKp7AxLtuUG9CKKp9GxsIMRa3_tceVEd7ZjoctNO1vpx2G_AJaessyjMkfhhwwSeanyF3SJdz9igEgRFGMSd7LDHu8SJV-NCT3cgzJWfZ6nw-8YziuAhnhDr1WaIY4-mBX_wCPrLWRpK8YgD36ZUvtAfbZm7jzrT0IwMM-VnLl_0fNW8lOoacff8eUqYNkfWSyuKpQ2acQGvNn6mkSa6r50lmlFyAV6wonQOOWrARYAm3bgF1fJTd57RxMC-wm4mVdwQwbc08wpvY4tej28UStzne3vfS2OLJq2aTEoMUaJvx926WkCQe8zTCWZdqb7j1D7U9IyOkqg6Wkj5ujMX5TTqzpOHJGuFiQWhWuLAT2lLfjFwHosHroJJkB8O4ql88HP_q8Ojgh9Q8DyEL9kLo4DOTV10zUsM5T2FPuAbPRurI7yRH4hY8lnhOyxNmDUfo"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/user/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"profile"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjY1NmFlMjYwY2YwMGU3ZGVhYTNiY2IyZWMxNzE1NDZkMWE3YTZkZDk2NmU1MTg4ODk0NmUzMzljOGY2YjY3NWY4OTAzYTRjZTdmY2E1MjMzIn0.eyJhdWQiOiIyIiwianRpIjoiNjU2YWUyNjBjZjAwZTdkZWFhM2JjYjJlYzE3MTU0NmQxYTdhNmRkOTY2ZTUxODg4OTQ2ZTMzOWM4ZjZiNjc1Zjg5MDNhNGNlN2ZjYTUyMzMiLCJpYXQiOjE1MTg2MjY0OTcsIm5iZiI6MTUxODYyNjQ5NywiZXhwIjoxNTE5MjMxMjk3LCJzdWIiOiI0NyIsInNjb3BlcyI6W119.M9bRV8U8gOgoauEZJOVgL9HjSWsMYhclOTJPqW5vbIiB5Ffm0gNsyPTVd66niferlCt7W6MX7WAwWbg6EFTIyROu_-CpbEyUsXDQg7TYDHRVbkwPSJev_UrQ8NPaD0LCh30IO7f58cRt-AUPy_0R21sbRgW8_iHztqD27pSuBlLoZwj9XoNaxvLtX8b7e1Nn7g04HODQRTHnpQcr5Vu2tADl5UA_ud1eAy8XMK5Cd_9O5-AHsiC5tqSOnvEL5XAKkH-8lrTqUlqEsxhgwBKGco-79FevpfMSNcpxnRJs9ovNHsPQ3vkWMGhKSEnADDFUwPH4lvJWCOil6uJSMquzmdacqatgSeXvUORrtIfN4hwtkMTygcK3T0Ha-9iERoE-wixWFncDvwm9_qbBF2KMMFg_DfKE4JZozPwIdB2DWi_zGMrjaZiOdjDSf8fg4HF7-FwmLkf6PqBj9fFk0ujv6rUV0UDmUkb_VWtIZPtj8GjeUOiXGhz63o1GxqJ9hey-bpPQSWXtSDd9Tm7EP5F4IML_9x3_l3RswSglAvL2eprd98zt_0GPhnwUAkH2BOsg2_jdgMIFX6MJsHf0ry9ke6AgFmJKUAwyMyKoj0BLdSA4PVSCi3sRGlJFG7Q94x6BqSOQ2jM8r4EMY-M4nVZdjnt2Fd0vBSatGNFkP3wk-vg"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Marco",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "garcia.robertogarcia1212@gmail.com",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123qwe1",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123qwe1",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "asdasdasd",
+							"type": "text",
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "image_update",
+							"value": "",
+							"type": "file",
+							"description": "",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/user/update",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1ZDllNGEwMzM0MGIzN2U2ZGZkYjI1NTkxNTliYzg5ZGM3ZDZmOGZjNzkzYjNmZWI4MTI0NDcwNGJiZmJjYjAzZTA2N2RlNzM4N2IxNWI0In0.eyJhdWQiOiIyIiwianRpIjoiYTVkOWU0YTAzMzQwYjM3ZTZkZmRiMjU1OTE1OWJjODlkYzdkNmY4ZmM3OTNiM2ZlYjgxMjQ0NzA0YmJmYmNiMDNlMDY3ZGU3Mzg3YjE1YjQiLCJpYXQiOjE1MTgxMjQ0NTMsIm5iZiI6MTUxODEyNDQ1MywiZXhwIjoxNTE4NzI5MjUzLCJzdWIiOiIyNiIsInNjb3BlcyI6W119.p8u8UGebwARhZiShpRnCfSucazhx2vXis0MCWCKSo9-Oa06wn5a6cEiVtjICAIeCKXLElLhFyWVaM6VXrOet7fwx4333L81RR_BYJBXymxd7RiQQlXDpYABJhK-uHOMC-2a_CPqkznamxrLaGGMwQxkPdspwxCEBfb7z6GkIAMbsug3ff4OVH5YGhmfxhbAF2OFA7jSjDNIGeZrGZSefcSxLn_nDKM77ed7uCv4Pd8RSNaFcLXZ_htuBwbdUE1-9xuj-qYlPhcAqvzRl2a9RKbe3_tYaI3WQ9nqPpA2-RU-lrXr1-pik0svOk2cnPC2mbxUOwETpyLYxPRgT_xHPSxgLeEzTUsPeSzkd9JH2ZldW3AWsKYnCGPuBI2Ubj5wufgwHqpHPek1Lptm1p9lzqykoElSDTAbLvEF9pJcvus2mfM73iahhFCjlJLkUU_0bc7sPT1x6irWxD1BF3cTybUS_yLz8mTHG_cBWa6iz7e1wFB77gN6Aixm52_INUJCjNohxdXbDuudAoR6SplVSCiX-oDqQMI1MUq8JLOXlQJUU_ZXo4QJGa7AFFPQfcTWfz5ARxzbA9tyBGnamahmxD-Fjc0p4m-bGVm9yi4v927r1H_V9WFi3qteL-KLMsWxn2fetTaw2L7gM4Hls0_yKSrZnXsmqP3ndyXRStVdYWrA"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/user/eyJpdiI6IjArY0FrUVNYMzhidVpZVEJUbDZoa2c9PSIsInZhbHVlIjoiXC9lcytHdkM4bnQzQjZiNlZteXhkREE9PSIsIm1hYyI6IjAyYzBlMDgzYzNiMzExNWI2MWY4MDNiMmEzYzczNTRlNWZlMDM4ZWU0ZjQxZjExMmY4ZGFlZmQwZjg0YThiN2YifQ==",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"eyJpdiI6IjArY0FrUVNYMzhidVpZVEJUbDZoa2c9PSIsInZhbHVlIjoiXC9lcytHdkM4bnQzQjZiNlZteXhkREE9PSIsIm1hYyI6IjAyYzBlMDgzYzNiMzExNWI2MWY4MDNiMmEzYzczNTRlNWZlMDM4ZWU0ZjQxZjExMmY4ZGFlZmQwZjg0YThiN2YifQ=="
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user admin show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk3OGM5ZDRkM2VlZDk3NDM0ZjkxYTY2NWM3ZDBmYzcxNGU3M2RmZDkyYjQzMWUwNTlkYWQzNzY1MmE2Mzc3NjllNmU3OTZhNTEzMmFlYjY0In0.eyJhdWQiOiIyIiwianRpIjoiOTc4YzlkNGQzZWVkOTc0MzRmOTFhNjY1YzdkMGZjNzE0ZTczZGZkOTJiNDMxZTA1OWRhZDM3NjUyYTYzNzc2OWU2ZTc5NmE1MTMyYWViNjQiLCJpYXQiOjE1MTg3MTUyOTUsIm5iZiI6MTUxODcxNTI5NSwiZXhwIjoxNTE5MzIwMDk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Zf26gDx3mUcX2waDS1M8jNakeqn5hMX14gshaSiF3zm-U62-dPQcsOCRJsTdQhZABxzt06uRG4ihKFziyGZZQ4U6XCavy9zH1hiOm4Tl6zEiZ96zhjy31-PhPNOqV5xATPSdkXRLZJYprScaQSn-JpQe-bFUhGSq97z2jEpPdFiQgxDuoE5ScvyaznOGxYpaehuAV2PI9Br79OMiURvku2ygu4bknBPSRTmGGmC0Wzuk-PVUvpxRT1zcgL7n2eXdey3u9NXtNAlLGJLrMCHLSa57e3P765YSdcgeztrA9ZbwyvID7fYMzL_TNmD7BjfLJX0QjgrlexonJGgcxagdZ8YTnhc7zrjzGWBylYoOT4acEJKyRmXyaFdwOGwfqlRhKv4QOLw5pDg74lLbfnOW25y03zrhaPYkd7-D62Gm1Oxi34Qn0QujtunNMhPRL3TaqtL2CYcXJSySqP8TibS3hrK9G1UkE5looX-1Xfjl-sBJjRGQ4Q5uBYy6KXImRHPugSmak04fxqj9bSOlIUnNTmdwIGXzblNxgzUCbfFLIPJnlJno87DASOpf9RGcy_HccmUpM71EYE3eiOReWAYlXtDTYTEJLhgpYEiappJBUz9yvqkGlaD6otOIvXH4hEYtfG1mKapGaizwi1CE4FlU9CcTw-6TqeLyu0J7TqEly_U"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/user_admin/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_admin",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user app show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1ZDllNGEwMzM0MGIzN2U2ZGZkYjI1NTkxNTliYzg5ZGM3ZDZmOGZjNzkzYjNmZWI4MTI0NDcwNGJiZmJjYjAzZTA2N2RlNzM4N2IxNWI0In0.eyJhdWQiOiIyIiwianRpIjoiYTVkOWU0YTAzMzQwYjM3ZTZkZmRiMjU1OTE1OWJjODlkYzdkNmY4ZmM3OTNiM2ZlYjgxMjQ0NzA0YmJmYmNiMDNlMDY3ZGU3Mzg3YjE1YjQiLCJpYXQiOjE1MTgxMjQ0NTMsIm5iZiI6MTUxODEyNDQ1MywiZXhwIjoxNTE4NzI5MjUzLCJzdWIiOiIyNiIsInNjb3BlcyI6W119.p8u8UGebwARhZiShpRnCfSucazhx2vXis0MCWCKSo9-Oa06wn5a6cEiVtjICAIeCKXLElLhFyWVaM6VXrOet7fwx4333L81RR_BYJBXymxd7RiQQlXDpYABJhK-uHOMC-2a_CPqkznamxrLaGGMwQxkPdspwxCEBfb7z6GkIAMbsug3ff4OVH5YGhmfxhbAF2OFA7jSjDNIGeZrGZSefcSxLn_nDKM77ed7uCv4Pd8RSNaFcLXZ_htuBwbdUE1-9xuj-qYlPhcAqvzRl2a9RKbe3_tYaI3WQ9nqPpA2-RU-lrXr1-pik0svOk2cnPC2mbxUOwETpyLYxPRgT_xHPSxgLeEzTUsPeSzkd9JH2ZldW3AWsKYnCGPuBI2Ubj5wufgwHqpHPek1Lptm1p9lzqykoElSDTAbLvEF9pJcvus2mfM73iahhFCjlJLkUU_0bc7sPT1x6irWxD1BF3cTybUS_yLz8mTHG_cBWa6iz7e1wFB77gN6Aixm52_INUJCjNohxdXbDuudAoR6SplVSCiX-oDqQMI1MUq8JLOXlQJUU_ZXo4QJGa7AFFPQfcTWfz5ARxzbA9tyBGnamahmxD-Fjc0p4m-bGVm9yi4v927r1H_V9WFi3qteL-KLMsWxn2fetTaw2L7gM4Hls0_yKSrZnXsmqP3ndyXRStVdYWrA"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/user_app/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_app",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user cms  activate user app",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRjMjcyM2Y4ZGFjODFkOGM5NjEwNDZjMDBjYzg0MWEyNGM5Yjc2ZTU4NDY4YmE3NmI1ZDJkZDJlNDNlOThkZjEzNTMwMGRmOTE3YjFjNDY2In0.eyJhdWQiOiIyIiwianRpIjoiZGMyNzIzZjhkYWM4MWQ4Yzk2MTA0NmMwMGNjODQxYTI0YzliNzZlNTg0NjhiYTc2YjVkMmRkMmU0M2U5OGRmMTM1MzAwZGY5MTdiMWM0NjYiLCJpYXQiOjE1MTYyMzcxMzMsIm5iZiI6MTUxNjIzNzEzMywiZXhwIjoxNTE2ODQxOTMyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.dYMncH2ZHVGgDAaNjVwrFpRhGHPTs4A4PClq2vns8HL3gHM8SbjWgF-Av0HDSHryV7oS4Wag_FxXbKWv9m3Zouvi_WtILdair8u2AzTUf1Xze18QRyPA08qhZEYqxVTtEjkErhFupkzRBStZI1Q9E5S4DSYOc4_pdwP1DWkgQB5HtNE3ZC4DPWip9G-3vKagoG9Nyiy_IZxXNf-uimVK5wMlW_TjsZD_kFdsbVMlsSPO4KZSvLpc9Y41hB7RBV2mJiPCqGEPNcVpvArSEb6lS7vgAv8BQeuFTl_jO8lqieqWNCzmVWjnx3MdRh4xoc35IYiZ-WmFNG-Su7w0j_n5sK-B8CDX9TVZyeSK46C0GeRE1Wz0I_PYo9me2GMWdadYEhRO_OjsDhgqFNVVaWiE4ZeJUM9CfmkC10jm_xctSBVK7mpoKosqzOmsIHJa2n13PckxPXUPfPE1hcY--VhKYcAgWcMzM6qItfvtO9CnDmykeM3BMMk84aRsRToi0AlplTjXWQHFNCJgoDY8TdPnHymon5FuGpJiyjg1b8AigZO-go0UUVJ9d0n84ZgFUaLfCx7wmYVD1QtLCMnz6SVYdGADF8pWcZO7VQADjgXURlGxpTnCK2Mk2G8A2t0beI-9YRGXP_0K8f2UysNhwUoNonqdiU0csteS5QM4QOOV41E"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/user_app/activate/eyJpdiI6IkV2Mk00OWF6WVFPQjVVU3p1R2tSeHc9PSIsInZhbHVlIjoiTndmejRsZzQ0czNzaWQ3OWJyZ1hBZz09IiwibWFjIjoiZjAyMDUzZTYxMTQ2MDZjNGM5Mzg0OTY2ZDMwMWRiODgwN2EyNDU0ODQ2NzMxOGI3YTVmNWNjZjE2OTU0ZTI5MyJ9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_app",
+						"activate",
+						"eyJpdiI6IkV2Mk00OWF6WVFPQjVVU3p1R2tSeHc9PSIsInZhbHVlIjoiTndmejRsZzQ0czNzaWQ3OWJyZ1hBZz09IiwibWFjIjoiZjAyMDUzZTYxMTQ2MDZjNGM5Mzg0OTY2ZDMwMWRiODgwN2EyNDU0ODQ2NzMxOGI3YTVmNWNjZjE2OTU0ZTI5MyJ9"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user app delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE1ZDllNGEwMzM0MGIzN2U2ZGZkYjI1NTkxNTliYzg5ZGM3ZDZmOGZjNzkzYjNmZWI4MTI0NDcwNGJiZmJjYjAzZTA2N2RlNzM4N2IxNWI0In0.eyJhdWQiOiIyIiwianRpIjoiYTVkOWU0YTAzMzQwYjM3ZTZkZmRiMjU1OTE1OWJjODlkYzdkNmY4ZmM3OTNiM2ZlYjgxMjQ0NzA0YmJmYmNiMDNlMDY3ZGU3Mzg3YjE1YjQiLCJpYXQiOjE1MTgxMjQ0NTMsIm5iZiI6MTUxODEyNDQ1MywiZXhwIjoxNTE4NzI5MjUzLCJzdWIiOiIyNiIsInNjb3BlcyI6W119.p8u8UGebwARhZiShpRnCfSucazhx2vXis0MCWCKSo9-Oa06wn5a6cEiVtjICAIeCKXLElLhFyWVaM6VXrOet7fwx4333L81RR_BYJBXymxd7RiQQlXDpYABJhK-uHOMC-2a_CPqkznamxrLaGGMwQxkPdspwxCEBfb7z6GkIAMbsug3ff4OVH5YGhmfxhbAF2OFA7jSjDNIGeZrGZSefcSxLn_nDKM77ed7uCv4Pd8RSNaFcLXZ_htuBwbdUE1-9xuj-qYlPhcAqvzRl2a9RKbe3_tYaI3WQ9nqPpA2-RU-lrXr1-pik0svOk2cnPC2mbxUOwETpyLYxPRgT_xHPSxgLeEzTUsPeSzkd9JH2ZldW3AWsKYnCGPuBI2Ubj5wufgwHqpHPek1Lptm1p9lzqykoElSDTAbLvEF9pJcvus2mfM73iahhFCjlJLkUU_0bc7sPT1x6irWxD1BF3cTybUS_yLz8mTHG_cBWa6iz7e1wFB77gN6Aixm52_INUJCjNohxdXbDuudAoR6SplVSCiX-oDqQMI1MUq8JLOXlQJUU_ZXo4QJGa7AFFPQfcTWfz5ARxzbA9tyBGnamahmxD-Fjc0p4m-bGVm9yi4v927r1H_V9WFi3qteL-KLMsWxn2fetTaw2L7gM4Hls0_yKSrZnXsmqP3ndyXRStVdYWrA"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/user_app/eyJpdiI6IjArY0FrUVNYMzhidVpZVEJUbDZoa2c9PSIsInZhbHVlIjoiXC9lcytHdkM4bnQzQjZiNlZteXhkREE9PSIsIm1hYyI6IjAyYzBlMDgzYzNiMzExNWI2MWY4MDNiMmEzYzczNTRlNWZlMDM4ZWU0ZjQxZjExMmY4ZGFlZmQwZjg0YThiN2YifQ==",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_app",
+						"eyJpdiI6IjArY0FrUVNYMzhidVpZVEJUbDZoa2c9PSIsInZhbHVlIjoiXC9lcytHdkM4bnQzQjZiNlZteXhkREE9PSIsIm1hYyI6IjAyYzBlMDgzYzNiMzExNWI2MWY4MDNiMmEzYzczNTRlNWZlMDM4ZWU0ZjQxZjExMmY4ZGFlZmQwZjg0YThiN2YifQ=="
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user cms register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk3OGM5ZDRkM2VlZDk3NDM0ZjkxYTY2NWM3ZDBmYzcxNGU3M2RmZDkyYjQzMWUwNTlkYWQzNzY1MmE2Mzc3NjllNmU3OTZhNTEzMmFlYjY0In0.eyJhdWQiOiIyIiwianRpIjoiOTc4YzlkNGQzZWVkOTc0MzRmOTFhNjY1YzdkMGZjNzE0ZTczZGZkOTJiNDMxZTA1OWRhZDM3NjUyYTYzNzc2OWU2ZTc5NmE1MTMyYWViNjQiLCJpYXQiOjE1MTg3MTUyOTUsIm5iZiI6MTUxODcxNTI5NSwiZXhwIjoxNTE5MzIwMDk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Zf26gDx3mUcX2waDS1M8jNakeqn5hMX14gshaSiF3zm-U62-dPQcsOCRJsTdQhZABxzt06uRG4ihKFziyGZZQ4U6XCavy9zH1hiOm4Tl6zEiZ96zhjy31-PhPNOqV5xATPSdkXRLZJYprScaQSn-JpQe-bFUhGSq97z2jEpPdFiQgxDuoE5ScvyaznOGxYpaehuAV2PI9Br79OMiURvku2ygu4bknBPSRTmGGmC0Wzuk-PVUvpxRT1zcgL7n2eXdey3u9NXtNAlLGJLrMCHLSa57e3P765YSdcgeztrA9ZbwyvID7fYMzL_TNmD7BjfLJX0QjgrlexonJGgcxagdZ8YTnhc7zrjzGWBylYoOT4acEJKyRmXyaFdwOGwfqlRhKv4QOLw5pDg74lLbfnOW25y03zrhaPYkd7-D62Gm1Oxi34Qn0QujtunNMhPRL3TaqtL2CYcXJSySqP8TibS3hrK9G1UkE5looX-1Xfjl-sBJjRGQ4Q5uBYy6KXImRHPugSmak04fxqj9bSOlIUnNTmdwIGXzblNxgzUCbfFLIPJnlJno87DASOpf9RGcy_HccmUpM71EYE3eiOReWAYlXtDTYTEJLhgpYEiappJBUz9yvqkGlaD6otOIvXH4hEYtfG1mKapGaizwi1CE4FlU9CcTw-6TqeLyu0J7TqEly_U"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Roberto 1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "prueba1n@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123qwe1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123qwe1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "dsadsadsa",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/user_admin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_admin"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZiMGI2ZWIzMzM4ZWVkNThhYWE2NGFmNWIyYjJhYWQ0ZDhhMjFhODQwZTQ5NzcxYzRjYzczODQxNDA3MGQwN2U4MzQxNjI4Njg0MTJiNTZmIn0.eyJhdWQiOiIyIiwianRpIjoiNmIwYjZlYjMzMzhlZWQ1OGFhYTY0YWY1YjJiMmFhZDRkOGEyMWE4NDBlNDk3NzFjNGNjNzM4NDE0MDcwZDA3ZTgzNDE2Mjg2ODQxMmI1NmYiLCJpYXQiOjE1MTc1MDQyNzgsIm5iZiI6MTUxNzUwNDI3OCwiZXhwIjoxNTE4MTA5MDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jNf_mCvXf9hnRVoyWTxVaNQLfA4TI3e49vtQ7nQFo0XCf_yJ38ke0nqVp-xP2VhsbICE2NwYAx20WxFj_v61rXrfC68e0ihf2XYexOwoAL9HrSh2rFqBRN2KjU9EH5xugd6LiMhaOkqgCWIaHuVEuU1POl7TxFcoSxQhPcehRQOtepdEKCL0VHKdm_hprTTptABm2HgsUzOgpEs5oUdXsIns37AehuG5BJ4828_9FsvJMIUTQMQ561MR0AlQQSsVLfDJVUPyDQ9VZPOl6vgB-dGF1F5hQxZ0cFvnnGE32jmaNVsql_C1s-LPVbpisDUAWC9m4GORKC9lXtTXtzeXwH2tq8uaHmnARHmlr8CTw6Yi0OEhWhlLVUtOP0Nxd_QDc5rEao_bk4BK3gsi9dL9SyfDtHZ7zILoA9BhkA_17NXLw1S7F5z5TJU_p0hJ0f-8xpTTNgF1vhKzZ1j3e4yKtBZB9xP-71-Q8dCNInX6coCWvHOP8KVAHJgMD8BE7EVUlDDGXzsovr7wcQ7DXETy8xSPE8yWyIaSWVFN7NCMnwUbS0ms28262EyhsnFblD5lzctXlGNBebEDJ6wLdB4CW_uRBAJM4vWR5fHtJ0URVoc2SLs0xDjJiCVoXGuiuz31iBN2wbVYUBLMjzWqu3hwAd1yrcDvzzvBNoIoLUff8pU"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "administrador",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "desarrollo@kokonutstudio.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123qwe1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123qwe1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "Garcia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_type",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/user_admin/eyJpdiI6IkpXQ1hYUDF6cHBEQ3huUTc1WXk1NFE9PSIsInZhbHVlIjoiYkg2aldpdlU4dHJ4M3V1bk9lNGpJZz09IiwibWFjIjoiNDQxY2RiN2QxZmY2NWRjNDJmYzI3M2NmNjg4YmZjZTUxODcwYzVkOTljNTQ4ZmJlYmFkNTE3MDNiNTllNzJiYiJ9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_admin",
+						"eyJpdiI6IkpXQ1hYUDF6cHBEQ3huUTc1WXk1NFE9PSIsInZhbHVlIjoiYkg2aldpdlU4dHJ4M3V1bk9lNGpJZz09IiwibWFjIjoiNDQxY2RiN2QxZmY2NWRjNDJmYzI3M2NmNjg4YmZjZTUxODcwYzVkOTljNTQ4ZmJlYmFkNTE3MDNiNTllNzJiYiJ9"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "user cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijk3OGM5ZDRkM2VlZDk3NDM0ZjkxYTY2NWM3ZDBmYzcxNGU3M2RmZDkyYjQzMWUwNTlkYWQzNzY1MmE2Mzc3NjllNmU3OTZhNTEzMmFlYjY0In0.eyJhdWQiOiIyIiwianRpIjoiOTc4YzlkNGQzZWVkOTc0MzRmOTFhNjY1YzdkMGZjNzE0ZTczZGZkOTJiNDMxZTA1OWRhZDM3NjUyYTYzNzc2OWU2ZTc5NmE1MTMyYWViNjQiLCJpYXQiOjE1MTg3MTUyOTUsIm5iZiI6MTUxODcxNTI5NSwiZXhwIjoxNTE5MzIwMDk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Zf26gDx3mUcX2waDS1M8jNakeqn5hMX14gshaSiF3zm-U62-dPQcsOCRJsTdQhZABxzt06uRG4ihKFziyGZZQ4U6XCavy9zH1hiOm4Tl6zEiZ96zhjy31-PhPNOqV5xATPSdkXRLZJYprScaQSn-JpQe-bFUhGSq97z2jEpPdFiQgxDuoE5ScvyaznOGxYpaehuAV2PI9Br79OMiURvku2ygu4bknBPSRTmGGmC0Wzuk-PVUvpxRT1zcgL7n2eXdey3u9NXtNAlLGJLrMCHLSa57e3P765YSdcgeztrA9ZbwyvID7fYMzL_TNmD7BjfLJX0QjgrlexonJGgcxagdZ8YTnhc7zrjzGWBylYoOT4acEJKyRmXyaFdwOGwfqlRhKv4QOLw5pDg74lLbfnOW25y03zrhaPYkd7-D62Gm1Oxi34Qn0QujtunNMhPRL3TaqtL2CYcXJSySqP8TibS3hrK9G1UkE5looX-1Xfjl-sBJjRGQ4Q5uBYy6KXImRHPugSmak04fxqj9bSOlIUnNTmdwIGXzblNxgzUCbfFLIPJnlJno87DASOpf9RGcy_HccmUpM71EYE3eiOReWAYlXtDTYTEJLhgpYEiappJBUz9yvqkGlaD6otOIvXH4hEYtfG1mKapGaizwi1CE4FlU9CcTw-6TqeLyu0J7TqEly_U"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/user_admin/eyJpdiI6IlpaaENZWVgzaFRXTzZkK0d4RDJ1R2c9PSIsInZhbHVlIjoiVEVCS1JiVHBaZTRvZUVCdkZlNXYxQT09IiwibWFjIjoiOTBiMWQ2Y2Y1YzA0Y2RhZTkwM2NkZDU4NzNjYmY1NDMwMjU0MjViZTg5MDBjMjg2MTBmMWY1NTM5ZGVmYzJjMyJ9",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"user_admin",
+						"eyJpdiI6IlpaaENZWVgzaFRXTzZkK0d4RDJ1R2c9PSIsInZhbHVlIjoiVEVCS1JiVHBaZTRvZUVCdkZlNXYxQT09IiwibWFjIjoiOTBiMWQ2Y2Y1YzA0Y2RhZTkwM2NkZDU4NzNjYmY1NDMwMjU0MjViZTg5MDBjMjg2MTBmMWY1NTM5ZGVmYzJjMyJ9"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "post cms show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/post/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"post",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "post api show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/post/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "post cms create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI1MjE0NGQxYTEwNThiZmZjMzYzYzkxYmQ4Yzk4MzQ2MzcwM2QwMTBkZWFkMmVlNGViZDEzYzU5YjA1YzA3MDE4OGQyODBiNTU2ZGU5NDE2In0.eyJhdWQiOiIyIiwianRpIjoiYjUyMTQ0ZDFhMTA1OGJmZmMzNjNjOTFiZDhjOTgzNDYzNzAzZDAxMGRlYWQyZWU0ZWJkMTNjNTliMDVjMDcwMTg4ZDI4MGI1NTZkZTk0MTYiLCJpYXQiOjE1MTg1NDIxNzIsIm5iZiI6MTUxODU0MjE3MiwiZXhwIjoxNTE5MTQ2OTcxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.EuhYGDIMh4JBapzS21qqmE4jXhF1-UBCWHF_uRp05bInu_RR5c-mz-tiigT_cbUjBkDOx7-nNN_8uf724bCoZxIHi-p_YmMWu1a4DSCx4yZibCzN02F1c7Tfwwv0qmLbGTmC6-kIOWcLhtmo9hl9Z-_hJw2RQXdKVnZnqHXpt3GCOAx_B_OYx_dQWbw2-wrPc8UCWT9aoOfpBaRSX5WkPreoi1Xs3e6YwAVMvHbWZJggbOBG3BtsNcEBaxXyLlKthp3ytQyb5ljZJKoyk8iyf3brLSO53S-SDDL4bkFnMq13lSM4U6wTjU_8tOjCAWFFHMjQrI2tZ1Eb6p6ayQOZJlkreTuW0vfbSAKkjto3faB2FzgjjD7Oi21jhunBvCmDcOaVPUA2wROLbhZ_CD13WDy9yHN6eU8jYQMpWz3LQa-seViV3k-VBInB2opEe-F17MfX_TwWZFvDtgd_AH2gEJrAUjjCUql06IfRxpB2VkhqPfvufbkmi9AfYOHRHtPGxam7aiQyJS5A_F9pRl4Q4G2v0itmPBfm-y5-d8oEaavhQE6Hjf9btoxrogbpbTMYvIwLkiQCgoBo8a7Hksx7_ejYuXmUfxfkh6PzzHz7ADY31Lmn0wkW3rad2NEYWS5hlWtC_Nl3b3O0oeVq70piaSGb-pp3PLsSP4noCe3uX84"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "esto es un post12211221",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "description a12212121",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "postprueba",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/post",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"post"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "post cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ1MGUzZmFhYjEwYzFiNjJiYjRhZWVjODgxYWIzNDc0NjY2MDMyOTRjMDU1OTEwM2ZjZWQ4OTY3ZWI3ZTU2YzY4ZTk3OTc4MWZmMjg4MTk3In0.eyJhdWQiOiIyIiwianRpIjoiNDUwZTNmYWFiMTBjMWI2MmJiNGFlZWM4ODFhYjM0NzQ2NjYwMzI5NGMwNTU5MTAzZmNlZDg5NjdlYjdlNTZjNjhlOTc5NzgxZmYyODgxOTciLCJpYXQiOjE1MTU2MjU5NzEsIm5iZiI6MTUxNTYyNTk3MSwiZXhwIjoxNTE2MjMwNzcxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.iPFQgwduVQTgiVpteLN4BGzxSimw6-xnrx2Bxhif-Q4kjXSDpWm0jP2oVgkHDnToA8No51KeY8Jt4rX6frGrHL9a_GphLfftrh2WweFr21QfJDNTBSDBg5zoCBji67Nmwn4jtIeenKOYHBOJi7LDPZt8nm5yuguEwTy6l3pSaz9d7hVZWAnYGzStVE371UMn1_1doAqRVWPQii15dpHpG4FazgerAMdVL7nGcosQmx-xIgNnbCmG8kHBDce6yv7XK-OHoSngyDgjHed0fv2q7ud4loQ9Ae0JsGNM0ad78vWDs6c5ZByeoL8hpYnycfir4yM2x_0l1IU7bkBKsMVEtjcz43RASW9MVADz_1hT5jeWDAF3Dbhc_l2hlqihfg2uqsSK4HW1W3PJLufvocI1KNab97tm4Mnkgu5ObM43SE_1jFoP60Hodwvu1Dpc_28L52dP3uox4sQjN4fTZQk7LFCKwImop781PyIpZ01rIT1nkK0Y4hAwuJMldG5RDxuVQDIzk4zvcQ1zyw8LKx9l7klK_RTCw0YAtS0xAHf9Bxnx1oUdIU-L6NGJXuxAG-O3J6y2c467kRCUQPdXcPRHMBRKsB2y-9yFfm55JTm00VP4lUZs49w2MEkQbCc_VP4AS_SYX9orNoSq8Fe6PZHNJa54SEMl6O5B32MdipnPtN4"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "esto es un post",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "description",
+							"value": "description a",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "slug",
+							"value": "post1",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/post/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"post",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "post cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgyNmEyMWNjNjA4ZmQ5YTZlNGJjZTU3NTBmM2IwY2I2ZWE3NGJlMTZjZjdmZjMyYTUxNTU0YWVjOGM3YTY2MjczNWI3YmY3Mzg2NmFlOGRiIn0.eyJhdWQiOiIxIiwianRpIjoiODI2YTIxY2M2MDhmZDlhNmU0YmNlNTc1MGYzYjBjYjZlYTc0YmUxNmNmN2ZmMzJhNTE1NTRhZWM4YzdhNjYyNzM1YjdiZjczODY2YWU4ZGIiLCJpYXQiOjE1MTI0MTI3MjQsIm5iZiI6MTUxMjQxMjcyNCwiZXhwIjoxNTEzMDE3NTI0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.LAwhB_sAmpWnZCs7gbTi20BU3Uc1sAOZKYUmgYk10KNmywwxXWvl3VwP4WBl7EIySfFjyDpZEQi9BfMigI-3v8lwbIfIs2neNyRRq0Eg3hUbm1RKbVoAq4Srx9xpYDiDVAylOGYEb8P2umKT7ikU8-8CzAOXY0VJnOhUhnLktBdlNthNOj6pgFuhLn-bJs70IuqDHp2WJ3006rHSYhwci_dXWFWLAYO49QpVMJn9NElLIpguKiZcO80TUI2zUBeXEP19PmHiqbEK3iws1-BUNlz_cYKA8bFm9Ugy0CWKEDbD99c4HMqt2gcmp5Z1WgQe7VHRB824cxwqXc7M4gdh2DBYPmVZGd-K48MsmD9ROkhiMYYw5j18VNsnNLuYWmUlk-fwwkBGey50CBJGSVGTB5f4yfbCpJGmTb2tJE9YtrAvHVvjbcTbwiRyhGdSZxOtauDBHyVI9jv6aHD8dJM23HqOPRVwq8mgur18BObTq8PhIvl_RXfb-Xe9GL4hwLlqG0EC1YKmt6sAMJua-kWNUWKnrk9ev6zkoydKTGLViPrF0FU7oB5IEFwiOcweJvFo854ojvAIc3HoLNXDY0SaJSPOAONy8BQJWxIUAH13Ycc97W26atllgcwGhKJcfhzIgeR4HxmL0hClQ0Nx3bBtEGfkHx-wUyc5BOA6KLaBSI0"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/post/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"post",
+						"2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "legal cms show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjFhYWIzNzU4ZGI5ZDdjMmZhY2ZhNDc0YzI2YzA3OGZiM2FkYTFkZThkNmIyNmVlMDM1NzQ3ODkwZGYzNmVhMjM1ZjVmYjY5OWQ5Y2MwYjk3In0.eyJhdWQiOiIyIiwianRpIjoiMWFhYjM3NThkYjlkN2MyZmFjZmE0NzRjMjZjMDc4ZmIzYWRhMWRlOGQ2YjI2ZWUwMzU3NDc4OTBkZjM2ZWEyMzVmNWZiNjk5ZDljYzBiOTciLCJpYXQiOjE1MTU1MTgwMDksIm5iZiI6MTUxNTUxODAwOSwiZXhwIjoxNTE2MTIyODA5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.EfZjXbDNy7PIinOY5DatpVjJIwLKwE0IBTyLqSzrYZjPs-XA94iRwDXrFE0x9KAihC-tEIVplPPtRSSMk3wBQhvljjn4B7Yjj791TlJIpil--gof_Cp2c2NF0y4UgaUuAvgjBhxIGDKRZY1rZuS9I17gfzpbCK85g3jMdqP__0fz7UaT0DjqSMM5wc-z3_tl3y01jGx-BtuoBY5a4EsLPmuYfiga06VOcPGzfNjbc2C-A-MMngT8yQjRXITguaU1fS_REUZUGo7zV7A3W5s_SKM0Quy5lwrwV_Jo1IO8h_i652CwMKsVgus8bpc2PJTYfR4tODofj_Ey5_aReLioMx_oOguY0oX8NqeZ7-dZ7AWUKNWKomWSMhW_DnVcWnLmSjER09Qn5zClW-KuUuxKQV4G_EX30PNtGwFgG0CfohBIIIxIkNws2e4Y67c1HAwX1IAiFje07nxWMchQVxuWkDF7DTttaeMB02c_TJkPAZfCN7_8iTpSkXO5e_1M8f1-yX45_RIdzEKiRtbqEXYNZMyyAZJCegqiGlq2vVLc3W7PhEufOVaOpZo7jrWL2HSWpayN0oINAmV-s2gp9owDzN0bBNskIvDzHbpc45A1GifswO7Wa1MXuJjsBlzBcEf4MX2UUXcP9CjHHRx5hCaRBsX28pfIYmzSG7JLsZuuRY0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "das",
+							"value": "dasdas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/legal/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"legal",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "legal api show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjYwYjAwNDBlZjVhNmY3MjljZmY3NDRiNGQyNmY0ZTg2NDVlNWM3OWFlMzFiZDYyYjg5OTliNTY5YzUyOWM5ODY1YjhiM2NkZDMyYTZjZThkIn0.eyJhdWQiOiIxIiwianRpIjoiNjBiMDA0MGVmNWE2ZjcyOWNmZjc0NGI0ZDI2ZjRlODY0NWU1Yzc5YWUzMWJkNjJiODk5OWI1NjljNTI5Yzk4NjViOGIzY2RkMzJhNmNlOGQiLCJpYXQiOjE1MTIxNTU3NDQsIm5iZiI6MTUxMjE1NTc0NCwiZXhwIjoxNTEyNzYwNTQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.B8sp6L6ghFCtVul5YtQpvCaLtPYn714-RBSJfSrFaegxzmEIf8mAinnbWT1Qcdi7JDSvKErROu3ZLxd_wy2rBLT1lJsVvBnSR8OQFIXyZobqzBWqQcWfKe4cJgZh0whUJK-AjPnkRlTvjYrgQQ0aybdqjNbrOw62G0BQw4V4OtoS6Ki-n377uBefvhx3rCJ8mBTuVnDHm0nmJbcp8YLNsmDw3JNLnPLUH1O7FoPpHvbfjb3OnZISs_lkrDhb3B-f8nRPlJSji4iJA7ErM5OAyg1s-KOIi30bvEMhtRYIyFBdEcBwJV2NTgCgKh58eF2I3oVvDZsqV-UgF1OhZf4bcHSboNDaF1z5E_rSo5JCWRuLdC8FDCGmWHcaPDWGRDCvVRB4QdBW3cPIRG9AOrC60dSbayDxHF1uhWNhmNjUu_7XqBmKvLb7lz4BrBgb2qo53z0RwF_JQExMbANIDanHEm1Kf35VGssH-9Rsr-9XsQI9eCQ1a_dhGTCoOoTo9-0Na9Vw7QNDVhXpcxJBivVXj8_Q9dw8wTVrcbKy0iyQSX4oRY92Ic0wM_K4yCq5qs535WXQmT2XtF_vFtzfE4Ct2wOVBBfJbk8ftVOYzuKH1qFgzr1G4_qaGa2sbwg7RSiQ-n4zMx_vafGqgph5nh3FefADLF650d2tISNWBOSj8Zw"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "das",
+							"value": "dasdas",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/legal/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"legal",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "legal cms create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkzMjI2MDlhZmJhZDA4NThkOWFjMDI5ZWY4ZDgwOTA3M2MzZWE1MzM0NmNjYmE2OTA4NGE4NzJmOThlZTNhMDlkZTc5OTliOTIxYTg0YzM2In0.eyJhdWQiOiIyIiwianRpIjoiOTMyMjYwOWFmYmFkMDg1OGQ5YWMwMjllZjhkODA5MDczYzNlYTUzMzQ2Y2NiYTY5MDg0YTg3MmY5OGVlM2EwOWRlNzk5OWI5MjFhODRjMzYiLCJpYXQiOjE1MTYyMTU5NzEsIm5iZiI6MTUxNjIxNTk3MSwiZXhwIjoxNTE2ODIwNzcxLCJzdWIiOiIyOCIsInNjb3BlcyI6W119.LigNU_8m8ZYO8XD0b0YU1Nn_EV82Rvbb-dn6JmpZz57pLuYg2nODC_1TdkPW7MC6PyyG-lTvjJltwyITM8o8isrJrotaMubuPf_A5O2Q-Tww3WdRIkwEpVSjSbKaoUDmxQ7jOpfP5ZbFPSAI7cJbBplW12AUyAgHzjK68r-dQmzbr8_ye3g7sN4-KmIriBlD2j52tlWNS51M5h8VVHSXx7_QWCrKkZuilz1TBnmI521Hs0FaGg2woSTr7n-zgn7RLzT8nrvqFTAjjAWbgkjdZBUa-TT-aWzHoSg5VeKSkIauf_vvQDXmLsC06fc9EtvQyX1q7BWhCy1CFJUQDy2niBP5Daxa7YK7HZ6Y26fGc7lMA2lXdqKGKJK8HDYvkHAv5q0Nytze5aJuArM1Gs29hb-miQ9jWkfp5XJb-STUen2csMRBnQ3gVbCeOgMnP0nIuJt3w2evBd1Y4z4mgWGit5COLrMlu5kHB_xZrvV8fHDld4hKW5utPqkk3XB7HcNvnhaKIdE6ZRBpaz9pvp8G6rxImxHJJ8g3gRWYgbL_OLkbr44prQ3olUAoFPpsZVtvBXaPE5Mhwf0UBe1vMcSNHf4NKpm4ip4BheClcDOe_DQpbtpF_QMcOHpU1VPL6ONsQqc8TQ9iE5RB46J7CuFcOzWqJbPBAVqJ11S0q5WZ3Fk"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "title dasdasdsa",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "description dsdsadasdas",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "slug1",
+							"type": "text"
+						},
+						{
+							"key": "required",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/legal",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"legal"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "legal cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjBjYmExZGVmN2RiZTdiNzA5N2FmOWFlOTM2ODNhZTFlOWRlZWRiMGMzZGEwZDcyNGM1Zjc1NTdmZDFlMmUwMGM3MGNhYjVkZDNlNmJmYWI2In0.eyJhdWQiOiIyIiwianRpIjoiMGNiYTFkZWY3ZGJlN2I3MDk3YWY5YWU5MzY4M2FlMWU5ZGVlZGIwYzNkYTBkNzI0YzVmNzU1N2ZkMWUyZTAwYzcwY2FiNWRkM2U2YmZhYjYiLCJpYXQiOjE1MTY0MDgyMTksIm5iZiI6MTUxNjQwODIxOSwiZXhwIjoxNTE3MDEzMDE5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ATyp637zSFNTaPXhhbhdJtMaGT4Yo7bT0yGHXbauF4AJhzIKyDpKoMYx8Vr9wuGKParTK-NJ1zDSElNQinsc7jy4M4LMKjox10glFIo6DSrD2RRWSpN9YSQRoCqSy4NA3NyUQoU1sMFynZbATWbPYWLm6VVXarZBIWkxlj-ZTvwCceI9Vd8Ei_KaP6dG4XUd-GNKf7WRphycPi8HkU4myTmVQnox2wrqbjcgKLUcLu-zSHtEsfRYItq3IsVfxkHYqzBXgWQYtUFcPwD9Uiiuy4y36Yu7NAeZ5BYUGodHIIsnZR5j6-az8MceLObXUsw9HZiGe_KuBQLRS5aR8v0yXHWpWwmu9Fe6HZrkViDJodPwaInct2nmWKSMnZRnBSwUM4Dpq8KDJxHSDgSElPaWisY7dKT09JIIdj3n-R6knMOlPl0YRawZ0i7EkNXzjbBGxdxDhK3pSu1zcsDSjmVNGgxsakq9moXZh1JYej3O3zL-m6ls94jpdbzzDE80CdRgXqhcFmJA3jArHreL9ngMve51SA0RQkMyJ_jlTEztEgjWXgamf7ITq-WzWHacya_lBXBkOCFlIalpbkZd2Rc4dHvrwhVZioIlMEwaEKKaHz6QukiFvxImS7KdtO5XDE5V0tzQSfn70eHmijIT11oUu_OID4R9zkxfMkOY8SGae1A"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Terminos y Condiciones",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "body",
+							"value": "dsa",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "slug",
+							"value": "required-legal",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "required",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/legal/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"legal",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "legal cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZlYzZlZDQ3NjA5ODI4N2M3NmUzYjRmZGZlN2YzZGRlMTJiMzg2N2IyMDNlYWY5ZWUwMDJhMmMzMWVjY2ZjNGYwOTJkZjljODQ4N2Y5YTgyIn0.eyJhdWQiOiIxIiwianRpIjoiNmVjNmVkNDc2MDk4Mjg3Yzc2ZTNiNGZkZmU3ZjNkZGUxMmIzODY3YjIwM2VhZjllZTAwMmEyYzMxZWNjZmM0ZjA5MmRmOWM4NDg3ZjlhODIiLCJpYXQiOjE1MTIwNjM0NTcsIm5iZiI6MTUxMjA2MzQ1NywiZXhwIjoxNTEyNjY4MjU3LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.dO15oJ8hnBUvyWLR3M9-4ceXZKEZ2dbarZlTj0jyI-CsXqNVamRNX96IQafAZCMJJSjHnRCxBpIW0VGcykbsJ3GgR1FneBwjHstqH_UNq-EnLRJa5285PC1syGaf_yw1SntuYTN_7FWGSZqia0yeA6JxJrk_zcEw3CjyHGSaEvve8XX8qosGXtF1X0NfH5yKsnWIHbWxVdsLPtQEKjG2MCpJHjh7didwlUjGOG__4Lab21-6TvDiVXdyLt8Y6kZfio79OQI3GbMGN4uhI_J3rJ6oqDT30tmUJIsrrZuIg83EkBXcKDQCfpaDNzWuYXlPB3ZXOVuxMXr5XVTrOd5EkpPWqAJzwVzXbLzIMxVA-F3nZkOEzXseNxjKhIJDWTN_E4oPIJcaa3HrKrVWc898DVwMhORJLAUNdFoAB6stjsN3j7DPcnmDxo9HfEAlRyh1r_lIztRJrnyVSL8lyYCpsklzCozKOHYFMmc2NwZ5WytQxkh0-vSepnoVfUsPYJKzlQA9X1JcGbWnC172Lrfcxy4JictzN9qqAdePv6Pv_H1GpcsdL5-EohVfo2OzO7OhhO0Y01d-L7o2Hd-5lAOZizil7G9bGD7t9TDRn58afbLeTwxJQkKEAN6zi6ze9s65wnshrmasJNp7K_cG5YJ_pGQC5Yg2Tz_ZfRExfsNseYg"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/legal/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"legal",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "contact app craete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "subject",
+							"value": "esto es un post",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "description a",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jason@kokonutstudio.com",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/contact/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contact",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "contact cms craete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE0YzA4NGIwYjQ5OGU3OGEwZTg3ODExZWQ0MzZmOGUzNDE0ODdkYjVhOWExYjRlZTRmMTE1YmFlNmUzNDMxNjNlMWJjY2E0YWZiNWIxNzhmIn0.eyJhdWQiOiIyIiwianRpIjoiYTRjMDg0YjBiNDk4ZTc4YTBlODc4MTFlZDQzNmY4ZTM0MTQ4N2RiNWE5YTFiNGVlNGYxMTViYWU2ZTM0MzE2M2UxYmNjYTRhZmI1YjE3OGYiLCJpYXQiOjE1MTc0NDg3MjksIm5iZiI6MTUxNzQ0ODcyOSwiZXhwIjoxNTE4MDUzNTI5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.tHHd5leZ8AKjL7EIYrFWyJTV0hQwQ8bxlrEqDfjxbhjMCNl-q0FgXoczErRttFNEH82ZIFbgBu5RJ3wUcFJWDXmQV9iWggGHwCp-A5l6v_gZBJlARL2Ylb-uDDFtDxvJVTQYhOpoq_HRJwv9XMItt2vxXbFuXhsCayCwohVINuc9UbCR_Wf-WYO-21qheQehATE9-FpydL1d9aNsRKwwnKKtJyLWubDSLkbVV5PgVHFYp2OFcdcNj6aHpwxqV653fyuWq-iVMsn139dVjlRqb5T2j2e2d07sjHvcCcKNN-CPGYdnkTaJgXxXO9531EkRKSPYGZRX05jjEs-aTUGk9Mmvv2Zns_2h-_krDN2CVrljPJCxXls5rbluwJFAO1actPmviKrINCE0hMlJdV_-ZqMpgCrWmwwVClWwGiRS2HeMJKOqMFNao2bNkJjUrUxyduCnitC5-5CHBCB1eAhB_8v9Lh1Z_O0Y5Dj1pYJq9xn2HgoyDbcr0fjLyJNId7wGG3maxmXymqs_oJzjsxepOERVVmyMrPT25ah3IW3D5m2MqYJfLtV-aKcSfODfkmldps3KzvyimWkslr_tsZ8Mko3NDfjmw13Be4zsQ9s0ZZDGv-9_fEuma5bDuCzTlphYFXS495fE1VWAoYg0YIGn65ORuwZ8A0YCotPv8dWB3ps"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "esto es un post",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "description a2121",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text",
+							"description": "1 redes sociales, 2 telefono, estos valores vienen de contact/types/all"
+						},
+						{
+							"key": "detail",
+							"value": "Facebook",
+							"description": "para el caso de redes social sirve para indicar si es TW o FB, etc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/contact/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"contact",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "contact cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5YjhmNGQ5NGQ3MjZkY2U2MDE4ZTJkZjNhNWVlZTkxNzJkNTZiMDlkMDNiM2QyOTY4ZjJmY2YzZmI1YzYwODUwYjZlN2M1YWEwN2I1NWJhIn0.eyJhdWQiOiIyIiwianRpIjoiYjliOGY0ZDk0ZDcyNmRjZTYwMThlMmRmM2E1ZWVlOTE3MmQ1NmIwOWQwM2IzZDI5NjhmMmZjZjNmYjVjNjA4NTBiNmU3YzVhYTA3YjU1YmEiLCJpYXQiOjE1MTYyOTgwMzUsIm5iZiI6MTUxNjI5ODAzNSwiZXhwIjoxNTE2OTAyODM1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.POkLyvZwEk0uJFQhUZ9VHuMs29apMx2HTjXUoj2-PZbadSAu1WyjCHqBviuj103b_HbJ07zfEvnD6FGZaFQcfx4YMZkqdl7NcJ5xU9ArJuoySSvPzYPhOKo-2bnCvQHCxmowdIqif5FuNEQp4rLrCBgShRSbDk7xsVhroq5pQwYAF8CE2LPGBSzhT5hhqGaNnI9FkqODx9smPr_lKTr_NMAtlgJCGq9DL4gvpuet72RArxEnRkayXcmVsRe1t_cZYu6XMT_eWvy-m3qUP4JpktlZwbUoFZLB8wllP_viBQD1ynUFy_w2vO6QVSc1FrtoO9YXIBV8jJ1pPcb6PblFfSYfsgjGfIt3-J2NrguRcXSPUyKmZVi4OC_qmq9eKe8xL2ZCfpoAKb6tg2l-Dztf7EcHuj93qEe4__SIIY2e8aU4vIabMh959ZD9BLhVImNhFPleueXm24iv0TOrgdb7K-XbEERtGcib1V_towgbAjsIIIPljqJ2nNQ6BFZdUnl8ztdjgAeUYu1kDQSoONkX14et8JN5Z9s6l91eeifUC9n6iXXSYXwn9AZIKBAQhV_vpnrgtf4RJuLdC1cl9AMSl2kfuDOALxWs5zQcZPwKIEyKfTIp-YD6pv2Lbq2163qP6qANun4xb5QpoM8_4q8JhLW7kABQtDpPViC2ajN--UM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "esto es un post",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "body",
+							"value": "description a",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "detail",
+							"value": "Facebook",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/contact/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"contact",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "contact  cms show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/contact/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"contact",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "contact api show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/contact/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contact",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "contact api cat_types show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/contact/types/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contact",
+						"types",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "contact cms cat_types show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/contact/types/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"contact",
+						"types",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "contact cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRhNGI0ZGFhY2Y2ZTdhMDBjMjE2N2YzNGRmM2ZhMzA0YjQ2YWVkNjllMjNkYzRjNWNjZGQ4OTZkNDg0MGU5Y2U4ZjU2M2NlYWY1NjA2MGNiIn0.eyJhdWQiOiIyIiwianRpIjoiNGE0YjRkYWFjZjZlN2EwMGMyMTY3ZjM0ZGYzZmEzMDRiNDZhZWQ2OWUyM2RjNGM1Y2NkZDg5NmQ0ODQwZTljZThmNTYzY2VhZjU2MDYwY2IiLCJpYXQiOjE1MTc0MTQ1MTIsIm5iZiI6MTUxNzQxNDUxMiwiZXhwIjoxNTE4MDE5MzEyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hFfrvj2Hy9oAzRVDrFJ6IpyxSGw6F-zA3N7nIwrUxuaM8J35bZu20D-d39Ljrya7ANsocxG5yCVmsirwLa4rriIpcYJ-m6uBIE1Y1b8MMEWfEV8N8I71Qs_yiKKC9YwA20FkFDKjTV-aOcCpr-hIvZJv690nDIEqqSrXWM9y_nlj3fm9ZdRCh5kLremXV1r9EPP1CYW6FcNxWYawhkns9bbC07pAHFKb8VBGzfdnabmUOtsiBumsOo5p3yOo7zIm3cG0iEjj-BCPUwyJ8Eq4dUYE7CUHQPwXDbc_fdJZBItNggqE3Wtz-dKOtTAUh0fwPLHKJ16ibFgGuC033mKMzI38AEgntBYMz1VqmvtQdXNR-KclCSoSvOHZ4fU1LAsD19HNn2skCXQIRHpF0G-i-BHVNXDWouFyDeBKTNv2yDbUMkUwNejzVbjDY4yjqAI-xijO8hG42jusBlIbnYF9u6YxmfeQG2k7225GdjjtcYQJ69kN0nFcfEJtQjpRJSl8E8U-AENA4pBnV6DnGpAmSBy-P2ky2smC5VkbK9SZW0UD-rF3HRDPAlx0_Jh9LiFKhnxuxSBCC4Bra1aoDz8R3PYn98u22TjTLzeNg13zmcs5WLSliUCYRwWu1S7M_Vr-BPi00JVBQ5tve0GYKyEO7S15k1MTkin88mGftws6idM"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/contact/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"contact",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faq cms craete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZhYjIzOTBhNmQ4YjI1MGQ4MWUzNTM2NGQwZGQ1YzJlOTM1NDZjN2UyNTIyMWQyYjM4OTcyYjNkMmNiNzVlMmNkZWEwNjk5Yjg5NDg5MWFhIn0.eyJhdWQiOiIyIiwianRpIjoiNmFiMjM5MGE2ZDhiMjUwZDgxZTM1MzY0ZDBkZDVjMmU5MzU0NmM3ZTI1MjIxZDJiMzg5NzJiM2QyY2I3NWUyY2RlYTA2OTliODk0ODkxYWEiLCJpYXQiOjE1MTYyOTAxNTQsIm5iZiI6MTUxNjI5MDE1NCwiZXhwIjoxNTE2ODk0OTU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.RfjV3takeRT8TagY-Lq1T2t5N6jKQHhGBYObO6bp6wCYH6FVAluZ4Uq50rtuIQUsqHWZ9jryot8VYBhJ_VXkGKNZmS8tDImlypVJk-dm6cV1Hpb-S9f9SWtC_4LxUMUPoZbBNnPXfhMAbfNrqOL-1BGCPwJP4HMXrnJyp0CcOgMjJI_NN6BmMvH-Rmw_FZT5afxX4vA7u9H31TxiZqFdua3RBgaj6VCtlWNYaRhtbVM9fIX9hgJf7O3eP1S9OvVRAdwy3DtXRkz0zQEoME3SOKGHOIRCUpCTnP6HJeIHg9FWUOHZ_oa9e7Va3pgbza0nTTTxGxipRMmJoisoWuM6XF4XP669tX_-5mJurI1_8LQFbhETQD7LtoJh3sslmTjSb5ZxCKNkubbl7c8ajSmlUysuECY3syh3zCIdlLs12z05ESt32-jLmxTPf1pagtN4lX9-OqwnyKFQ2rNBGNIYr_pByqeqtI5RnK2Hm3gfuOiu5CLSURNzTyHB1ZDTFUzKR7xOHC5Uuv9mVJIqjHuglo6PyDPoTqS0TymjsKL1lwJxBooKtY8oqZLtp86LnLX7Q8qLWMOksAkfNBWiyu1aeXjADmCltpKmi1dG1OKf9nFp_-B1_M_ntE3FFPwkh0JZ4w4TwJClZKb9WcYDUQnz9BEbYMEfDVzhCy_3fusxuIE"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "question",
+							"value": "esto es un post",
+							"type": "text"
+						},
+						{
+							"key": "answer",
+							"value": "description a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/faq/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"faq",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "faq cms show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/faq/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"faq",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faq api show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/faq/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"faq",
+						"all"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faq cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZhYjIzOTBhNmQ4YjI1MGQ4MWUzNTM2NGQwZGQ1YzJlOTM1NDZjN2UyNTIyMWQyYjM4OTcyYjNkMmNiNzVlMmNkZWEwNjk5Yjg5NDg5MWFhIn0.eyJhdWQiOiIyIiwianRpIjoiNmFiMjM5MGE2ZDhiMjUwZDgxZTM1MzY0ZDBkZDVjMmU5MzU0NmM3ZTI1MjIxZDJiMzg5NzJiM2QyY2I3NWUyY2RlYTA2OTliODk0ODkxYWEiLCJpYXQiOjE1MTYyOTAxNTQsIm5iZiI6MTUxNjI5MDE1NCwiZXhwIjoxNTE2ODk0OTU0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.RfjV3takeRT8TagY-Lq1T2t5N6jKQHhGBYObO6bp6wCYH6FVAluZ4Uq50rtuIQUsqHWZ9jryot8VYBhJ_VXkGKNZmS8tDImlypVJk-dm6cV1Hpb-S9f9SWtC_4LxUMUPoZbBNnPXfhMAbfNrqOL-1BGCPwJP4HMXrnJyp0CcOgMjJI_NN6BmMvH-Rmw_FZT5afxX4vA7u9H31TxiZqFdua3RBgaj6VCtlWNYaRhtbVM9fIX9hgJf7O3eP1S9OvVRAdwy3DtXRkz0zQEoME3SOKGHOIRCUpCTnP6HJeIHg9FWUOHZ_oa9e7Va3pgbza0nTTTxGxipRMmJoisoWuM6XF4XP669tX_-5mJurI1_8LQFbhETQD7LtoJh3sslmTjSb5ZxCKNkubbl7c8ajSmlUysuECY3syh3zCIdlLs12z05ESt32-jLmxTPf1pagtN4lX9-OqwnyKFQ2rNBGNIYr_pByqeqtI5RnK2Hm3gfuOiu5CLSURNzTyHB1ZDTFUzKR7xOHC5Uuv9mVJIqjHuglo6PyDPoTqS0TymjsKL1lwJxBooKtY8oqZLtp86LnLX7Q8qLWMOksAkfNBWiyu1aeXjADmCltpKmi1dG1OKf9nFp_-B1_M_ntE3FFPwkh0JZ4w4TwJClZKb9WcYDUQnz9BEbYMEfDVzhCy_3fusxuIE"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "question",
+							"value": "esto es un post",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "answer",
+							"value": "description a2112121212121221",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/faq/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"faq",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "faq cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImRhYjUyMDIxYjkwOTAyY2MyYTJhNjE5ZDg2ZDgzNTMxY2RkMWIyYWY3ZjBjNmJjMzdmN2NjN2VkNWVjYzdhZWE2Mzk1ZjA4YTUxM2JhZDc0In0.eyJhdWQiOiIyIiwianRpIjoiZGFiNTIwMjFiOTA5MDJjYzJhMmE2MTlkODZkODM1MzFjZGQxYjJhZjdmMGM2YmMzN2Y3Y2M3ZWQ1ZWNjN2FlYTYzOTVmMDhhNTEzYmFkNzQiLCJpYXQiOjE1MTMzNTQ2NjAsIm5iZiI6MTUxMzM1NDY2MCwiZXhwIjoxNTEzOTU5NDYwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ZS8C0vnXIFaREXvdq9MN1DJFqFN5DtutBTHv9PBZx0k74bmwmAtJvdZIfu8HPKvcx1AF2F4_9Z32oaW5UDBaGA8WXNJPWypDtH7vRFmKXwmtbUnxlvXcaL6q37ROEZe26CZ1PHVW-6giMtg4Lf4ZwseBe0mvTyE7NBk2aFOK8f10nKry3s0sKAtpFH7HXVgiaYfg5SBWLd7jMHfjYfswnaMirbBO1c0-5MUREl35cBvIHb6XcSEt_Lp3jh9fsVl3HrISMl7flpWv2rKGB4qM1ZjVBLy_caGZf53LHEK8TRlW6CQA4hgZLA2KV2hMAP8v5t1jKJ-iqHZdBw_bH-6Cygp8MFOkoofOpb-wVaDeB341zTj5GCY1s-fhkSIraDjfMKTuCh9nBBbDphXdt3HS8GLwoqRF_o0gufMJsisQPGUjeJlF5_VaKX4Y_lSc_n9W_7HmB34FS2kkpITfol_PiaCXgRSqpV2qFlMk4Me3tdWcePWUDZOgF4iOyDrOs93QUGOeN_CGICAh2PCHn0algNW_opBupVDWnAuvRsbaN4OtkeLfUAvxhXoZzL2sLX5OP8UYLIi7nJbgLu2SQowYVIx9BFbHE9blgQWm11-XGUN8iZub9iTRTqGo6Zy1Nz7BiLsZdyTrE_idY7HI50YUw3w9f2I7bRlbIJHoRkrerHw"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/faq/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"faq",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "featuredImage cms craete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjU2ZThiMzQ4ODBlMzJhNGMwMDE5ZjFhNzk1Y2VlZTNlODczNDFkMjIxYTUyOWFkMjc1YTIyYzU0Y2Y2NmRjZjQ4ODJiYWQ4NGI5ZWYyMTg4In0.eyJhdWQiOiIyIiwianRpIjoiNTZlOGIzNDg4MGUzMmE0YzAwMTlmMWE3OTVjZWVlM2U4NzM0MWQyMjFhNTI5YWQyNzVhMjJjNTRjZjY2ZGNmNDg4MmJhZDg0YjllZjIxODgiLCJpYXQiOjE1MTg1NDI3ODEsIm5iZiI6MTUxODU0Mjc4MSwiZXhwIjoxNTE5MTQ3NTgwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.QbSyjYy15rmtUbEJtcdJXg6ntxygl-nRxfEh7zqUFBWY1jsAinG59bJkUeqJq7cwze-vsPhI3eb-CSPaSXtfsYBX-3ybpTNUNTWjnH_1PjUUHXKIYSpI7uVSPn10DHwZ9uwmHImRss7mb52Ce3OQ1tbuyzTzjE0xLglGSikuS4_D8qw9UYNuP1wfU7NoWORWbrTEgBHNaUyVftz3i6OVkL1oODGQLayDprssJkAytdhSu9JMdZuLYtM3Ev-omPFhSnxcCuqQL7P1cD2_qTGJn6KR86198bLIVAD_AihXs2V3-lnNVgKVALhHWKepIpTuhjc5iV9M2_VTDEAuMXAeimKGarFuef9l5hjIrfJV81TpItEJSIquJRTP-hT_E2oquSCLkyxZ4vf91SjLM6Et3Dl1oNmPihs-ZgqRdWVMv3-boozejDzzFwcKFFv7craGZTjlE0AcxkC9k15cKMPgUUZHuEmp5AcRtGFZUan1yHhcyS6uluBkLMzslEiVjMeoL3Q2ZKf7N_u9HaWOVIU7bVa69XWoxs1D21Gts7HDmlNFshh8gpxIlOwI-yoy6pJ4KPn_zyxbHobLQDwSE98YkpvlwE2feBK9IiY9DshXzX6pmmlXwU1asjmAmD4PNru4X4Xx1Tp6m_XVJngINNGRcCaT1cNsDv-j176lomyrmoY"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "publicidad engañosa",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "dssadsadsdasasd",
+							"type": "text"
+						},
+						{
+							"key": "image_1",
+							"value": "",
+							"type": "file"
+						},
+						{
+							"key": "image_2",
+							"value": "",
+							"type": "file"
+						},
+						{
+							"key": "active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/featured_image/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"featured_image",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "featuredImage cms show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/featured_image/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"featured_image",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "featuredImage api show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/featured_image/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"featured_image",
+						"all"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "featuredImage cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjM0MWY2MTcxNTI2MjAxODZhYjEzYjUxNjQwZmJlNTBkMDhhN2I3YmEzODcxYjczOGExZGM3MjAyOWVjY2ZkZDI5YmQ5ZjI4YTdlYjdhOTU3In0.eyJhdWQiOiIyIiwianRpIjoiMzQxZjYxNzE1MjYyMDE4NmFiMTNiNTE2NDBmYmU1MGQwOGE3YjdiYTM4NzFiNzM4YTFkYzcyMDI5ZWNjZmRkMjliZDlmMjhhN2ViN2E5NTciLCJpYXQiOjE1MTMzNTk2OTYsIm5iZiI6MTUxMzM1OTY5NiwiZXhwIjoxNTEzOTY0NDk2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.lTamCCVxKIsRdAvuWD7mxaMsS6sC-OjmMHbdhb2eEKlv8_xtJ4u-cbXCKVbVXn-VSrrGGro5W2XiOEQ-pN5h967LwMKBBplYUwrP8l81ws5jUIGwMbAxaUzajTSgjIsxNG04Rkn2mZF9dNlUlr34sPIBq-p8iXRs0O_y-CquAXrt4bKTkIPqzTGvmWorhnx72PCGhzJEELqb821cjhUiVEb2hvvaKzrCydRR43MpM6ia799GuiyornvWSIsRyodfSDV0ZcssbqG_3gj6X3PvNDV_DWS5Pf2VQD4ssQofkE5KVkxNeTRjhB2ycqrktEiIweCbGm_aWuHAf0ppjARHAXZgoJbx9-Ws4Vya8uMgJaoUqTvwuw5f9JdMuOiwHVSglqc8FCdENncoZUPFDorJyGSNLEOwyZg2aTXWLqcZJgXc7cNZIi4RD5X2-EYtMribdGuoV4d6_100w5Hkf6Rh5CMCZp_zogO4tpx1L3BuX7JiFAgU-Q4qPii2l4Ekg9SAr4ADxkTYeWdiHyWwpYt_g33VDHR4njNxBnivWyatM07zGP3OQxghv34dZsmlDzTLBb_WmXA3Xkn-GjCC4ySo6PLmAFMRoe9MknPn4gvnVIH6ddDE97Yr8FVXUeZDEBo-EXL3DUw_UE1R0Bt0NhXy8yTlHU_H64EEm3i0fx3gROs"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/publicity/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"publicity",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "featuredImage cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImYzMjQ5NDcwNWRhNGE4ZGJlMTkyNmQyNjllZTU0OTI2MDNhNWRhOTI5NGVhZDc5ZGRkZTNjZDEwOTE0NmYzM2I0MDg3Nzg5MjRmNjY2YmU2In0.eyJhdWQiOiIyIiwianRpIjoiZjMyNDk0NzA1ZGE0YThkYmUxOTI2ZDI2OWVlNTQ5MjYwM2E1ZGE5Mjk0ZWFkNzlkZGRlM2NkMTA5MTQ2ZjMzYjQwODc3ODkyNGY2NjZiZTYiLCJpYXQiOjE1MTMzNjI2NDEsIm5iZiI6MTUxMzM2MjY0MSwiZXhwIjoxNTEzOTY3NDQxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TqrzCvQylQF9lcJY9mKHP1r1GiPRoAmJV6chZ2Gbl7acwP-WYRceNZHw3x6H6urBTWF_Y4ZMN-n3pju1xya18ZHeGab176uC_E0inkYI7CK7ZHQZFOCkD1QVtYhB5mo2m1QJZnwMPm9JPGVOn3YkpV1Q_vM1B3u84hKIYT0eaq2N8IYpF849rDr0dHSWSMH_vDZ2PAm6NiJkzfedCXET72nmJfaFKMfMVfnHDPRyu7W1LAwYHLsUxXd5UoRxHvn1Y9EYRV9QNSL92Ess2QI2E-uqRhubvebiwxjo5ZKd6m3AfKYvX0tTSCjNexVj2fD64gHBLqwYaATGn1aoRzYcovt9kETG7q53rxfKZLQ2zYJ-2y0g4dKoAfjiM-HBmqrdyh8Nh4Vsw2hus9X4Ah9daAAhd9tLq5b2T-C5tqKfwnAqq_FRj5T6wln5KinrupZoxxgL1u0qyysG61n6htyFuWuuis2Us317lm0F5xUO6X1e7qNM5A9eW5LbpwQA9J3bKhOt4ae8CQWCSJU1oGteNssOZFUCWOavcT2BN4LqfWgjH98za7jZ9jeeevU7uYHcQpH05GD9EdRN0MHyihSsHBf6sOjR_zMRtk_3H7wHIdqV8ZvA_Gt-lqKV73PY_DcfV1sfOL-FoTLBNRg0ZlGCOHovw-ICbNIsAAkH_F2MkSY"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "titulo",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "body",
+							"value": "dsad",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "image_1",
+							"value": "dssdsd",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "image_2",
+							"value": "sdsdasdsad",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "active",
+							"value": "0",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/publicity/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"publicity",
+						"2"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "language show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "version",
+						"value": "2"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/language/es_mx",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"language",
+						"es_mx"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "language show list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/list_languages",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"list_languages"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "language show available list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "version",
+						"value": "2"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/available_list_languages",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"available_list_languages"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "language cms delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkxYTlkODU0ZTk0ODk3ZWEyNWZiNWY2N2Q5ZjZlODUwN2E4YjdiNjliN2IxYWY2ZjExNjg0YTk3YWZjMTE0NTEzYzhjOGQwMTk4NGVhODY4In0.eyJhdWQiOiIyIiwianRpIjoiOTFhOWQ4NTRlOTQ4OTdlYTI1ZmI1ZjY3ZDlmNmU4NTA3YThiN2I2OWI3YjFhZjZmMTE2ODRhOTdhZmMxMTQ1MTNjOGM4ZDAxOTg0ZWE4NjgiLCJpYXQiOjE1MTU2MDYxMDAsIm5iZiI6MTUxNTYwNjEwMCwiZXhwIjoxNTE2MjEwOTAwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.j2XFcAHhgs9THKWzeSYXCZ7Lp-fdxvOE2yXEycIaf3omjNxVyr0adOj3hMuietMIRz8Tc3vWZj4Vots7YogUzIG4_IVM8jLyCPsEgJPgvma3f_e1eDrQwOiJPDBGK9kkFfDmiBlYxVnttMm1RjQj25EdEm-za3uTADDiijJxAPhu1dBtB0KyNsuVCuwTniL0TAch_wqCLmg4v9CiQ9KBr2MU16b4L3SWSmnJbNpupuJuVsS6_LH1tB4sYrDKaXnu0n8i1BgtznkBd6KLiQ9SCY5gZnprugG-Vg_N4aSdCiEEzcBeDtYNLbFGMuh_N3Z4gC6EhX_0ACSQWi6WtQ6-pe17anze2a4Xp70tTKOWN1jZzsR4yWcm7oehbZOYRIL17ffL9tWfCz_kvJ4oRjJ6f4IdMywlVBcpB4oYggNPFwvhmYCGioV5uALDe8VpQlDS98pX01Ui8L6wCO-3iEowpUrsl381m0mjH0YNis6EHljasHe03b-m_5kCnctyTE0PrV7t2EbtCS6SZHoJ0awt_7nLCha4T1Iz9cr09Vb4rq9vem4EGMESb5eDfdb5i2z_A0LXUL2HZvFTqh2AS8BTYhsbCHVgMXHIdf9Pe4KdKYpIqIC6aoh8rJHt2uz-njASN0yDPSF2hC5vxs4ujvFpEe_npS0Tfy6Z7ROgxP-N2GA"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/cms/language/es_mx",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"language",
+						"es_mx"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "language cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkxYTlkODU0ZTk0ODk3ZWEyNWZiNWY2N2Q5ZjZlODUwN2E4YjdiNjliN2IxYWY2ZjExNjg0YTk3YWZjMTE0NTEzYzhjOGQwMTk4NGVhODY4In0.eyJhdWQiOiIyIiwianRpIjoiOTFhOWQ4NTRlOTQ4OTdlYTI1ZmI1ZjY3ZDlmNmU4NTA3YThiN2I2OWI3YjFhZjZmMTE2ODRhOTdhZmMxMTQ1MTNjOGM4ZDAxOTg0ZWE4NjgiLCJpYXQiOjE1MTU2MDYxMDAsIm5iZiI6MTUxNTYwNjEwMCwiZXhwIjoxNTE2MjEwOTAwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.j2XFcAHhgs9THKWzeSYXCZ7Lp-fdxvOE2yXEycIaf3omjNxVyr0adOj3hMuietMIRz8Tc3vWZj4Vots7YogUzIG4_IVM8jLyCPsEgJPgvma3f_e1eDrQwOiJPDBGK9kkFfDmiBlYxVnttMm1RjQj25EdEm-za3uTADDiijJxAPhu1dBtB0KyNsuVCuwTniL0TAch_wqCLmg4v9CiQ9KBr2MU16b4L3SWSmnJbNpupuJuVsS6_LH1tB4sYrDKaXnu0n8i1BgtznkBd6KLiQ9SCY5gZnprugG-Vg_N4aSdCiEEzcBeDtYNLbFGMuh_N3Z4gC6EhX_0ACSQWi6WtQ6-pe17anze2a4Xp70tTKOWN1jZzsR4yWcm7oehbZOYRIL17ffL9tWfCz_kvJ4oRjJ6f4IdMywlVBcpB4oYggNPFwvhmYCGioV5uALDe8VpQlDS98pX01Ui8L6wCO-3iEowpUrsl381m0mjH0YNis6EHljasHe03b-m_5kCnctyTE0PrV7t2EbtCS6SZHoJ0awt_7nLCha4T1Iz9cr09Vb4rq9vem4EGMESb5eDfdb5i2z_A0LXUL2HZvFTqh2AS8BTYhsbCHVgMXHIdf9Pe4KdKYpIqIC6aoh8rJHt2uz-njASN0yDPSF2hC5vxs4ujvFpEe_npS0Tfy6Z7ROgxP-N2GA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"bienvenido_omitir\": \"Saltar\",\"bienvenida_btn\": \"Inicio\",\"tutorial_omitir\": \"Saltar\",\"tutorial_btn\": \"Inicio\",\"login_btn_facebook\": \"Ingresar con Facebook\",\"login_btn_twitter\": \"Ingresar con Twitter\",\"login_btn_google\": \"Ingresar con Google\",\"login_btn_iniciar_sesion\": \"Iniciar Sesion\",\"login_btn_registrate\": \"Registrate\",\"login_btn_terminos\": \"Terminos y Condiciones\",\"login_privacidad\": \"Aviso de Privacidad\",\"iniciar_sesion_titulo\": \"Por favor, ingresa tus datos.\",\"iniciar_sesion_correo_placeholder\": \"Correo electronico\",\"iniciar_sesion_contrasena_placeholder\": \"Contrasena\",\"iniciar_sesion_btn\": \"Iniciar sesion\",\"iniciar_sesion_crear_cuenta\": \"Crear Cuenta\",\"iniciar_sesion_olvidaste_contrasena\": \"Olvidaste tu contrasena\",\"registrate_titulo\": \"Completa el siguiente formulario\",\"registrate_nombre_placeholder\": \"Nombre*\",\"registrate_apellidos_placeholder\": \"Apellidos*\",\"registrate_correo_placeholder\": \"Correo electronico*\",\"registro_contrasena_placeholder\": \"Contrasena\",\"registro_confirmar_contrasena_placeholder\": \"Confirmar Contrasena\",\"registro_legales_etiqueta\": \"Al registrar tu cuenta estas aceptandolos terminos y condiciones y aviso de privacidad\",\"registro_crear_cuenta_btn\": \"Crear Cuenta\",\"registro_login_btn\": \"Ya tienes cuenta?\",\"legales_terminos\": \"Terminos y Condiciones\",\"legales_privacidad\": \"Aviso de Privacidad\",\"menu_title\": \"Menu\",\"menu_dashboard\": \"Dashboard\",\"menu_perfil\": \"Perfil\"}",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "version",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/language/es_mx",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"language",
+						"es_mx"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "language cms create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ1MGUzZmFhYjEwYzFiNjJiYjRhZWVjODgxYWIzNDc0NjY2MDMyOTRjMDU1OTEwM2ZjZWQ4OTY3ZWI3ZTU2YzY4ZTk3OTc4MWZmMjg4MTk3In0.eyJhdWQiOiIyIiwianRpIjoiNDUwZTNmYWFiMTBjMWI2MmJiNGFlZWM4ODFhYjM0NzQ2NjYwMzI5NGMwNTU5MTAzZmNlZDg5NjdlYjdlNTZjNjhlOTc5NzgxZmYyODgxOTciLCJpYXQiOjE1MTU2MjU5NzEsIm5iZiI6MTUxNTYyNTk3MSwiZXhwIjoxNTE2MjMwNzcxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.iPFQgwduVQTgiVpteLN4BGzxSimw6-xnrx2Bxhif-Q4kjXSDpWm0jP2oVgkHDnToA8No51KeY8Jt4rX6frGrHL9a_GphLfftrh2WweFr21QfJDNTBSDBg5zoCBji67Nmwn4jtIeenKOYHBOJi7LDPZt8nm5yuguEwTy6l3pSaz9d7hVZWAnYGzStVE371UMn1_1doAqRVWPQii15dpHpG4FazgerAMdVL7nGcosQmx-xIgNnbCmG8kHBDce6yv7XK-OHoSngyDgjHed0fv2q7ud4loQ9Ae0JsGNM0ad78vWDs6c5ZByeoL8hpYnycfir4yM2x_0l1IU7bkBKsMVEtjcz43RASW9MVADz_1hT5jeWDAF3Dbhc_l2hlqihfg2uqsSK4HW1W3PJLufvocI1KNab97tm4Mnkgu5ObM43SE_1jFoP60Hodwvu1Dpc_28L52dP3uox4sQjN4fTZQk7LFCKwImop781PyIpZ01rIT1nkK0Y4hAwuJMldG5RDxuVQDIzk4zvcQ1zyw8LKx9l7klK_RTCw0YAtS0xAHf9Bxnx1oUdIU-L6NGJXuxAG-O3J6y2c467kRCUQPdXcPRHMBRKsB2y-9yFfm55JTm00VP4lUZs49w2MEkQbCc_VP4AS_SYX9orNoSq8Fe6PZHNJa54SEMl6O5B32MdipnPtN4"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "json",
+							"value": "{\n\"bienvenido_omitir\": \"Saltar\",\n\"bienvenida_btn\": \"Inicio\",\n\"tutorial_omitir\": \"Saltar\",\n\"tutorial_btn\": \"Inicio\",\n\"login_btn_facebook\": \"Ingresar con Facebook\",\n\"login_btn_twitter\": \"Ingresar con Twitter\",\n\"login_btn_google\": \"Ingresar con Google\",\n\"login_btn_iniciar_sesion\": \"Iniciar Sesion\",\n\"login_btn_registrate\": \"Registrate\",\n\"login_btn_terminos\": \"Terminos y Condiciones\",\n\"login_privacidad\": \"Aviso de Privacidad\",\n\"iniciar_sesion_titulo\": \"Por favor, ingresa tus datos.\",\n\"iniciar_sesion_correo_placeholder\": \"Correo electronico\",\n\"iniciar_sesion_contrasena_placeholder\": \"Contrasena\",\n\"iniciar_sesion_btn\": \"Iniciar sesion\",\n\"iniciar_sesion_crear_cuenta\": \"Crear Cuenta\",\n\"iniciar_sesion_olvidaste_contrasena\": \"Olvidaste tu contrasena\",\n\"registrate_titulo\": \"Completa el siguiente formulario\",\n\"registrate_nombre_placeholder\": \"Nombre*\",\n\"registrate_apellidos_placeholder\": \"Apellidos*\",\n\"registrate_correo_placeholder\": \"Correo electronico*\",\n\"registro_contrasena_placeholder\": \"Contrasena\",\n\"registro_confirmar_contrasena_placeholder\": \"Confirmar Contrasena\",\n\"registro_legales_etiqueta\": \"Al registrar tu cuenta estas aceptandolos terminos y condiciones y aviso de privacidad\",\n\"registro_crear_cuenta_btn\": \"Crear Cuenta\",\n\"registro_login_btn\": \"Ya tienes cuenta?\",\n\"legales_terminos\": \"Terminos y Condiciones\",\n\"legales_privacidad\": \"Aviso de Privacidad\",\n\"menu_title\": \"Menu\",\n\"menu_dashboard\": \"Dashboard\",\n\"menu_perfil\": \"Perfil\"\n}",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "idiom",
+							"value": "es_mx12",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "version",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/language",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"language"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "configuration show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/configuration/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"configuration",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "configuration cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjQ1MGUzZmFhYjEwYzFiNjJiYjRhZWVjODgxYWIzNDc0NjY2MDMyOTRjMDU1OTEwM2ZjZWQ4OTY3ZWI3ZTU2YzY4ZTk3OTc4MWZmMjg4MTk3In0.eyJhdWQiOiIyIiwianRpIjoiNDUwZTNmYWFiMTBjMWI2MmJiNGFlZWM4ODFhYjM0NzQ2NjYwMzI5NGMwNTU5MTAzZmNlZDg5NjdlYjdlNTZjNjhlOTc5NzgxZmYyODgxOTciLCJpYXQiOjE1MTU2MjU5NzEsIm5iZiI6MTUxNTYyNTk3MSwiZXhwIjoxNTE2MjMwNzcxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.iPFQgwduVQTgiVpteLN4BGzxSimw6-xnrx2Bxhif-Q4kjXSDpWm0jP2oVgkHDnToA8No51KeY8Jt4rX6frGrHL9a_GphLfftrh2WweFr21QfJDNTBSDBg5zoCBji67Nmwn4jtIeenKOYHBOJi7LDPZt8nm5yuguEwTy6l3pSaz9d7hVZWAnYGzStVE371UMn1_1doAqRVWPQii15dpHpG4FazgerAMdVL7nGcosQmx-xIgNnbCmG8kHBDce6yv7XK-OHoSngyDgjHed0fv2q7ud4loQ9Ae0JsGNM0ad78vWDs6c5ZByeoL8hpYnycfir4yM2x_0l1IU7bkBKsMVEtjcz43RASW9MVADz_1hT5jeWDAF3Dbhc_l2hlqihfg2uqsSK4HW1W3PJLufvocI1KNab97tm4Mnkgu5ObM43SE_1jFoP60Hodwvu1Dpc_28L52dP3uox4sQjN4fTZQk7LFCKwImop781PyIpZ01rIT1nkK0Y4hAwuJMldG5RDxuVQDIzk4zvcQ1zyw8LKx9l7klK_RTCw0YAtS0xAHf9Bxnx1oUdIU-L6NGJXuxAG-O3J6y2c467kRCUQPdXcPRHMBRKsB2y-9yFfm55JTm00VP4lUZs49w2MEkQbCc_VP4AS_SYX9orNoSq8Fe6PZHNJa54SEMl6O5B32MdipnPtN4"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\n\"welcome_enabled\": true,\n\"tutorial_enabled\": true,\n\"maintenance_enabled\": false,\n\"account_activation\": true,\n\"fb_enabled\": true,\n\"tw_enabled\": true,\n\"g_enabled\": true,\n\"profile_enabled\": false,\n\"contact_enabled\": false,\n\"faq_enabled\": false,\n\"content_enabled\": false,\n\"dashboard_banner\": false,\n\"dashboard_message\": false,\n\"dashboard_content\": false,\n\"noticeOfPrivacy\": false\n}",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "version",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/configuration",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"configuration"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "show alerts show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/show_alerts/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"show_alerts",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "show alerts cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjNhMzIwM2E2OTExZGFmYTk5MGQ2MTYwOTAxNWYyZDUyNzE0MmYwMGFiMTllMzE1YjJiNWU1NGY0OTgzZmU3OWNlOWIyYmVjOWU5MWVhNWIwIn0.eyJhdWQiOiIyIiwianRpIjoiM2EzMjAzYTY5MTFkYWZhOTkwZDYxNjA5MDE1ZjJkNTI3MTQyZjAwYWIxOWUzMTViMmI1ZTU0ZjQ5ODNmZTc5Y2U5YjJiZWM5ZTkxZWE1YjAiLCJpYXQiOjE1MTU3ODQ3MjIsIm5iZiI6MTUxNTc4NDcyMiwiZXhwIjoxNTE2Mzg5NTIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.RsDX8nOpSj2ces1i3arxuZD7qutg5KpNjl4Hw3pT8TDbghkduHAuCmVH0boyPZV6B_sU85idILkD21XhksY03WAeYmuiv9LRhtMVimv00ZugtNg9_E2XRfKNHXfYEvlG9WahYSIsktqy_GW9p6QsCZ9GSJ5w5YoKEW9HbsxO4Zz-G9B_a2qIJE3S45xS-0-ngPYU9hfvpn9DZnD7D0Os2Fi-w7h2wtzIiqQ7SqtHtVkTRusPXiVowp9hQfVacixVM9NiZG4kY1bZUpO7foXeASgwHkyhPaznRC4DB4gorpiJVQmh501aGjI2Yfpqko0oAnmi9KrsF9yZMiisfP2H8PojuFQPdxh4_1LqiQYa1LZ90SAc5IIdn8R9YPxGIPPbh2Rjrag9pcqXYO73fOi9R2TjyKar-dT8EqrWLlqblVpFmyMFh0amPJ1Qi1DrYocoxAcD7SCh1CZCYMyy548GBSJGjq2gh4Bei65cFuNU-jN3EK25ZiHS-SeRZ26TlRuBoEaeZk8IOv-mhW9FWSF1ZCPN1WgVY9vqiEwur2hLLecjWICzCzrV4dy0M-Uir3Vr1pM5FuhoSqzJAxIQV4Qqmc9VO51trZH4UI8gArsxyEyMJ_X2F5nahdfiZE0rp1YqQlDKalz8ppMOoFpMZKvIbaf2MfP1CutT45piATL98Cg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\n\"type\":0,\n\"title\":\"Titulo del Alert\",\n\"url_image\":\"fsfdsfsdfsdf\",\n\"desc\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum fermentum massa et accumsan. Phasellus eget viverra erat. Pellentesque nunc ante, vestibulum sed nunc ut, cursus euismod magna.\",\n\"has_btn_close\":true,\n\"btnAction\":\"http://www.google.com\",\n\"timestamp\": \"123456794\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/show_alerts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"show_alerts"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "show tutorial show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/api/tutorial/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"tutorial",
+						""
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "show tutorial cms update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "lang",
+						"value": "es_mx"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI2NmM5OTBlOWU5YzQwODhmZWI0NzNkZTljZGEzOTI2NTY4M2E2N2M0OTk4ZWNhNDMxMWU5NGJmZWJjMmM5MTViMjJiOTM3MGNmNzgxNzk3In0.eyJhdWQiOiIyIiwianRpIjoiYjY2Yzk5MGU5ZTljNDA4OGZlYjQ3M2RlOWNkYTM5MjY1NjgzYTY3YzQ5OThlY2E0MzExZTk0YmZlYmMyYzkxNWIyMmI5MzcwY2Y3ODE3OTciLCJpYXQiOjE1MTYzMTg2NjQsIm5iZiI6MTUxNjMxODY2NCwiZXhwIjoxNTE2OTIzNDY0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jDVFriD4XPmxdAGjHp7LBTb_snFn5w6ms3kC14NSRYBpBKGP0RZqH1nVV_GlBevE5SJvCw5MqiXULKe79poax0b9juGrNMHJSws4TLIyzpiBXD3HNiIVXnjbAwQaZRtaMEsONUBkf-zC9___ZzmJnXzrRWk-44P30wVUBQVSTDlXbQcwhCgs-k8Gwd3BN-q-v9tr-kjfgR8OHkXkRMt25yGjjsd052DxkBiwD2AHKtNazCyR5hkkUBsshnj9QxD2zBogFSTxJcRdhMnhzJXY-wwaGHKhQFOmr3La8I8wMAcc3TIOdvVSJC65N-2wM-xoTny0b8aPnBNJ6jK0sQeZxXAvXE9qvy0yiwgEWaFVYjUaGT9Ia2fdPxFB7lnuCNudhdpFcI1qUMIlWp1--aC6tfd-3w8J3Xd4DPe8IoqYMeh2dNWkcrNKN3j2LohiC3DCvzC-ghnj_WU1tB1PJJZHC27wDz0tJwNzlhYNgdJtwCE_a-LYcbs9foL-2QAEsWsOi4sh8c5i8czA5cRZqhS4U7pGDmSxYOMYDM26a78A9MD26RQaPF2i6OSyhiB_3kKY1nldYdtdFWjQ2uqUiYfqtWBMw2m64_-j9QppMfeT0qRxCSV-ubyoYmDngt7AaX8B6b4Fp_Er0kF4lz6k29gY0rErM9wSu--yejWpuLFoboE"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\n\"type\":0,\n\"title\":\"Titulo del Alert\",\n\"url_image\":\"fsfdsfsdfsdf\",\n\"desc\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum fermentum massa et accumsan. Phasellus eget viverra erat. Pellentesque nunc ante, vestibulum sed nunc ut, cursus euismod magna.\",\n\"has_btn_close\":true,\n\"btnAction\":\"http://www.google.com\",\n\"timestamp\": \"123456794\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/cms/tutorial",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cms",
+						"tutorial"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
