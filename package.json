@@ -7,7 +7,7 @@
 	"test": "tests"
 	},
 	"scripts": {
-		"api-test": "newman run tests/estandar.json --global-var 'url=https://api.dev.estandares.kokonutstudio.com'"
+		"api-test": "newman run tests/estandar.json --global-var 'url=https://api.dev.estandares.kokonutstudio.com' --reporters junit --reporter-junit-export newman.xml"
 	},
 	"author": "",
 	"license": "ISC",
