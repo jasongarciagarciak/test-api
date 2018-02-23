@@ -1,0 +1,17 @@
+{
+	"name": "test-estandares",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"directories": {
+	"test": "tests"
+	},
+	"scripts": {
+		"api-test": "newman run tests/estandar.json --global-var 'url=https://api.dev.estandares.kokonutstudio.com'"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"newman":"^3.5.2"
+	}
+}
